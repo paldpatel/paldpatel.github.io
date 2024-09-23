@@ -79,8 +79,9 @@ export default function TimelineCmpt(props) {
       uni: "Memorial University Of Newfoundland",
       edu: "Degree: Bachelor Of Science",
       major: "Major: Computer Science",
-      duration: "Time: Jan 2019 - Dec 2022(expected)",
-      grade: "GPA: 3.4/4",
+      minor: "Minor: Business Administration",
+      duration: "Time: Jan 2022 - Dec 2025(expected)",
+      grade: "GPA*: 3.5/4",
       place: "St. John's, NL",
     },
   ];
@@ -113,6 +114,7 @@ export default function TimelineCmpt(props) {
         {school.uni}
         <p>{school.edu}</p>
         <p>{school.major}</p>
+        <p>{school.minor}</p>
         <p>{school.duration}</p>
         <p>{school.grade}</p>
         <p>{school.place}</p>

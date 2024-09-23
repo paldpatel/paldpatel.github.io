@@ -15,10 +15,10 @@ function Header() {
 
       {matches ? (
         <div className="groupicons">
-          <div className="clickicons"><a href="#Experience">Experience</a></div>
           <div className="clickicons"><a href="#Education">Education</a></div>
           <div className="clickicons"><a href="#Project">Projects</a></div>
           <div className="clickicons"><a href="#About">About</a></div>
+          <div className="clickicons"><a href="#skills">Skills</a></div>
           <div className="clickicons"><a href="#Contact">Contact</a></div>
         </div>
       ) : null}
