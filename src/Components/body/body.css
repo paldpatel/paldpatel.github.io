@@ -1,78 +1,100 @@
+/* General Body Styles */
 .body {
     display: flex;
     flex-direction: column;
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-top: 5%;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    padding: 5% 10%; /* Unified padding for consistency */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text in the body */
+    background-color: #f5f5f5; /* Light background for better contrast */
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
 }
 
+/* Main Heading Style */
+h1 {
+    font-size: 2.5rem; /* Large and clear main heading */
+    color: #333; /* Darker color for better contrast */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Description and Developer Sections */
 .body1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px; /* Add space below the developer section */
 }
 
 .discription {
     display: flex;
     flex-direction: column;
+    margin: 20px 0; /* Add margin for spacing */
 }
+
 .developer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
+/* Link Styles */
 a {
-    color: #0c0c0c;
-    text-decoration: none;
+    color: #0c0c0c; /* Standard link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 .linkedIn {
-    color: #0060B6;
+    color: #0060B6; /* LinkedIn color */
 }
 
 .linkedIn:hover {
-    color: black;
-    text-decoration:none; 
-    cursor:pointer;  
+    color: #0c0c0c; /* Change color on hover */
+    cursor: pointer; /* Change cursor on hover */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
 }
+
+/* Animation for Translated Text */
 .translate {
     color: #1976d2;
     animation: MoveUpDown 1s linear infinite;
     position: relative;
-    left: 0;
-    bottom: 0;
     padding-left: 5px;
 }
+
 @keyframes MoveUpDown {
     0%, 100% {
-      bottom: 0;
+        bottom: 0;
     }
     50% {
-      bottom: 10px;
+        bottom: 10px;
     }
-  }
-.get {
-    max-width: 120px;
 }
+
+/* Image and Card Styles */
+.get {
+    max-width: 120px; /* Limit the width of the element */
+}
+
 .imgCircle {
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular images */
+    border: 5px solid #1976d2; /* Add border to the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
+
 .body2 {
     text-align: center;
-    
 }
+
 .body3 {
     width: 100%;
-    
     justify-content: center;
     display: flex;
     align-items: center;
@@ -81,83 +103,114 @@ a {
 }
 
 .body4 {
-    width: 100%
+    width: 100%;
 }
+
+/* Internal Flexbox Structure */
 .internal {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 15px; /* Spacing between items */
     text-align: left;
 }
+
 .about {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
+
 .card {
-    background-color: lightblue;
+    background-color: white; /* Change to white for better readability */
+    padding: 20px; /* Increase padding for card content */
+    border-radius: 10px; /* Round corners for cards */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scale transition */
 }
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
 .bold {
-    font-weight: 500;
+    font-weight: 600; /* Make bold text a bit bolder */
 }
+
 .pal {
     width: 300px;
 }
+
 .body6 {
     margin-top: 1%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    width: 100%
+    gap: 20px; /* Space between items */
+    width: 100%;
 }
+
+/* Paragraph Styles */
 p {
     font-weight: lighter;
-    font-size: smaller;
+    font-size: 1rem; /* Increased font size for better readability */
+    line-height: 1.6; /* Increased line height for better spacing */
+    color: #555; /* Softer color for paragraph text */
 }
+
+/* Card Info Styles */
 .cardInfo {
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-start; /* Align items at the top */
 }
 
+/* Image Side Styles */
 .imgside {
     height: 288px;
     width: 350px;
-    
 }
+
+/* Hello World Background */
 .helloWorld {
     background-color: black;
+    color: white; /* Make text color white for contrast */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Round corners */
 }
+
+/* Skill Icon Styles */
 .skill {
     width: 48px;
     height: 48px;
-    object-fit: cover
+    object-fit: cover;
 }
+
+/* Skills Section */
 .skills {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
-    grid-gap: 50px;
+    grid-gap: 30px; /* Reduced gap for better layout */
 }
+
+/* Responsive Styles */
 @media only screen and (max-width: 720px) {
     .body1 {
-        flex-direction: column;
+        flex-direction: column; /* Stack on small screens */
     }
     .discription {
-        padding-bottom: 10px;
+        padding-bottom: 10px; /* Adjust padding */
     }
     .imgCircle {
-        width: 200px;
-        height: 200px;
+        width: 200px; /* Resize image for mobile */
+        height: 200px; /* Resize image for mobile */
     }
     .internal {
-        flex-direction: column;
+        flex-direction: column; /* Stack internal items */
     }
     .about {
-        width: 100%
+        width: 100%; /* Full width for mobile */
     }
     .body6 {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
     }
-    
 }

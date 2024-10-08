@@ -1,3 +1,38 @@
-.whole {
-    font-family: 'Montserrat';
-}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height of the viewport */
+    background-color: #f0f4f8; /* Light background for better contrast */
+    color: #333; /* Dark text color for readability */
+  }
+  
+  .body-container {
+    flex: 1; /* This makes sure Body takes up remaining space */
+    padding: 20px; /* Spacing around the Body content */
+    display: flex;
+    justify-content: center; /* Center align Body content */
+    align-items: center; /* Center vertically */
+  }
+  
+  /* Add a media query for responsiveness */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .body-container {
+      padding: 10px; /* Adjust Body padding */
+    }
+  }
+  .header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .body-container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow for Body */
+  }
+  .clickicons:hover {
+    color: #1976d2; /* Change color on hover */
+    text-decoration: underline; /* Add an underline effect */
+  }
+  

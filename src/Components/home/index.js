@@ -1,19 +1,17 @@
-import React from 'react'
-import './home.css'
-import Header from '../header/index'
-import Body from '../body/index'
+import React from 'react';
+import './home.css'; // Ensure your CSS file contains styles for better layout
+import Header from '../header/index';
+import Body from '../body/index';
 
-function Home() {
+const Home = () => {
   return (
-    <div className='whole'>
-        <div>
-            <Header/>
-        </div>
-        <div>
-            <Body/>
-        </div>
+    <div className='home-container'>
+      <Header />
+      <div className='body-container'>
+        <Body />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

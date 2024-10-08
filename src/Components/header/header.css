@@ -1,55 +1,70 @@
 .header {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 10% 0 10%;
+    padding: 1% 10%;
+    background-color: #1976d2; /* Header background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
+
 .logos {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .logoName {
     font-weight: bold;
-    color: #1976d2;
+    color: white; /* Logo color */
+    font-size: 1.5rem; /* Increased font size for better visibility */
+    margin-left: 10px; /* Space between icon and logo name */
 }
-.title {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2px;
-    font-weight: 400;
-}
+
 .groupicons {
-    display: none;
+    display: flex; /* Always display group icons */
     flex-direction: row;
-    gap: 10px;
+    gap: 20px; /* Increased spacing between items */
     align-items: center;
-    font-weight: 200;
-    font-size: smaller;
+    font-weight: 400;
+    font-size: 1rem; /* Font size */
 }
+
+.clickicons a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px; /* Add padding */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.clickicons a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #000000; /* Change color on hover */
+}
+
 .getstarted {
-    display: none;
+    display: flex; /* Show get started button */
     font-size: small;
     color: white;
     background-color: black;
-    padding: 10px;
+    padding: 10px 15px; /* More padding */
     border-radius: 5px;
-}
-@media only screen and (min-width: 720px) {
-    .groupicons {
-        display:flex;
-    }
-    
-    .getstarted {
-        display: flex;
-    }
+    transition: background-color 0.3s; /* Smooth transitions */
 }
 
+.getstarted:hover {
+    background-color: #444; /* Darker on hover */
+}
 
 .homeimg {
     height: 40px;
     width: 40px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 720px) {
+    .groupicons {
+        display: none; /* Hide on smaller screens */
+    }
 }
