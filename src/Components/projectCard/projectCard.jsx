@@ -11,34 +11,47 @@ export default function MediaCard(props) {
   return (
     <Card sx={{ 
       maxWidth: 345, 
-      boxShadow: 3, 
-      transition: '0.3s', 
+      background: 'rgba(30, 41, 59, 0.7)', // Slate 800 with transparency
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      borderRadius: '16px',
+      color: '#f8fafc',
+      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)', 
+      transition: 'all 0.3s ease', 
       '&:hover': {
-        transform: 'scale(1.05)', // Slightly scale up on hover
-        boxShadow: 6 // Increased shadow on hover
+        transform: 'translateY(-10px)', // Lift up instead of just scaling
+        boxShadow: '0 20px 40px rgba(59, 130, 246, 0.2)', // Accent color glow
+        border: '1px solid rgba(59, 130, 246, 0.4)'
       },
-      marginBottom: 2 // Add bottom margin for spacing between cards
+      marginBottom: 2 
     }}>
       <CardMedia
         component="img"
-        height="300"
+        height="240"
         image={props.img}
         alt={props.subheader}
         sx={{
-          objectFit: 'cover', // Ensure the image covers the area
+          objectFit: 'cover',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
         }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 600 }}>
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" sx={{ color: '#94a3b8' }}>
           {props.subheader}
         </Typography>
       </CardContent>
-      <CardActions>
-        <IconButton aria-label="GitHub repository">
-          <a href={props.git} target="_blank" rel="noopener noreferrer">
+      <CardActions sx={{ padding: '0 16px 16px' }}>
+        <IconButton 
+          aria-label="GitHub repository" 
+          sx={{ 
+            color: '#cbd5e1',
+            '&:hover': { color: '#3b82f6', background: 'rgba(59, 130, 246, 0.1)' }
+          }}
+        >
+          <a href={props.git} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex' }}>
             <GitHubIcon />
           </a>
         </IconButton>

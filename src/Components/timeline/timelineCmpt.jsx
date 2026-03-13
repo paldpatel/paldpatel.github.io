@@ -12,22 +12,45 @@ import { styled } from '@mui/material/styles';
 
 // Styled component for custom timeline items
 const StyledTimelineContent = styled(TimelineContent)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderRadius: '8px',
-  backgroundColor: theme.palette.background.paper,
-  boxShadow: theme.shadows[1],
+  padding: theme.spacing(3),
+  borderRadius: '16px',
+  background: 'rgba(30, 41, 59, 0.4)', // Dark slate translucent
+  backdropFilter: 'blur(10px)',
+  border: '1px solid rgba(255, 255, 255, 0.05)',
+  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+  color: '#f8fafc',
+  transition: 'all 0.3s ease',
   '&:hover': {
-    backgroundColor: theme.palette.action.hover,
+    background: 'rgba(30, 41, 59, 0.7)',
+    transform: 'translateX(5px)',
+    border: '1px solid rgba(59, 130, 246, 0.3)',
   },
 }));
 
 const EducationContent = styled(Typography)(({ theme }) => ({
   margin: theme.spacing(1, 0),
-  color: theme.palette.text.secondary,
+  color: '#cbd5e1', // Slate 300
 }));
 
 export default function TimelineCmpt(props) {
   const jobs = [
+    {
+      id: 2,
+      company: "Braya Renewable Fuels",
+      role: "Information Technology Analyst Intern",
+      duration: "Jan 2025 - Aug 2025",
+      place: "Come By Chance, NL",
+      description: [
+        "Managed user access controls, Citrix environments, and VMware-based virtual machines.",
+        "Set up and configured Cisco switches, routed and terminated network cables, and resolved wireless connectivity issues with Cisco APs.",
+        "Provided end-user support for Windows laptops, desk phones, Motorola radios, and mobile devices.",
+        "Deployed new IT systems, including kiosks, desk workstations, and mobile hardware.",
+        "Supported operating system upgrades, exploring deployment strategies.",
+        "Performed and monitored system backups, managing physical storage space, clearing old snapshots, and verifying Azure-based backups.",
+        "Resolved helpdesk tickets efficiently, documenting solutions and following escalation.",
+        "Created and maintained technical documentation for outage procedures, hardware setups, and system configurations."
+      ],
+    },
     {
       id: 1,
       company: "OPAS Mobile",
@@ -66,14 +89,14 @@ export default function TimelineCmpt(props) {
         <TimelineConnector />
       </TimelineSeparator>
       <StyledTimelineContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
           {job.role} @ {job.company}
         </Typography>
-        <Typography variant="subtitle2" color="text.secondary">
+        <Typography variant="subtitle2" sx={{ color: '#3b82f6', mb: 1 }}>
           {job.duration} - {job.place}
         </Typography>
         {job.description.map((desc, index) => (
-          <Typography key={index} variant="body2" color="text.secondary">
+          <Typography key={index} variant="body2" sx={{ color: '#94a3b8', mb: 0.5 }}>
             {desc}
           </Typography>
         ))}
@@ -90,10 +113,10 @@ export default function TimelineCmpt(props) {
         <TimelineConnector />
       </TimelineSeparator>
       <StyledTimelineContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
           {school.uni}
         </Typography>
-        <Typography variant="subtitle1" fontWeight="bold">
+        <Typography variant="subtitle1" fontWeight="bold" sx={{ color: '#3b82f6' }}>
           {school.edu}
         </Typography>
         <EducationContent variant="body2">
@@ -103,7 +126,7 @@ export default function TimelineCmpt(props) {
           {school.duration} | {school.grade} | {school.place}
         </EducationContent>
         {school.achievements && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" sx={{ color: '#94a3b8' }}>
             {school.achievements}
           </Typography>
         )}

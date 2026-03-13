@@ -66,19 +66,21 @@ function Body() {
     <div className="body">
       <div className="body1">
         <div className="description">
-          <h1>
-            &lt;Hello World! &gt; <br /> I'm{" "}
-            <span style={{ color: "#1976d2" }}>Pal</span> Patel
+          <h1 className="hero-text">
+            Building digital<br />experiences.
           </h1>
+          <p className="hero-subtext">
+            Hi, I'm <span className="hero-highlight">Pal Patel</span>, a passionate Software Developer based in Canada.
+          </p>
           <div className="developer">
-            <BugReportIcon />
+            <BugReportIcon className="dev-icon" />
             <p>Software Developer</p>
           </div>
         </div>
       </div>
 
       <div className="body2">
-        <h3 onClick={handleClick}>
+        <h3 onClick={handleClick} className="quote-box">
           {!active ? (
             <span>"નમ્રતા એ તમામ ગુણોનો નક્કર પાયો છે."</span>
           ) : (
@@ -86,12 +88,17 @@ function Body() {
           )}
           <GTranslateIcon className="translate" />
         </h3>
-        <p> - Confucius </p>
+        <p className="quote-author"> - Confucius </p>
       </div>
 
       <div id="Education" className="body4">
         <h1>Education</h1>
         <TimelineCmpt className="timeline" isJob={false} />
+      </div>
+
+      <div id="Experience" className="body4">
+        <h1>Experience</h1>
+        <TimelineCmpt className="timeline" isJob={true} />
       </div>
 
       <div id="Project" className="body5">
@@ -107,7 +114,7 @@ function Body() {
             Hi, I'm <b>Pal Patel</b>
           </p>
           <p>
-            I'm an upcoming <b>Software Developer</b> and Computer Science student at Memorial University of Newfoundland. I have experience in programming languages like <b>HTML, CSS, JavaScript, Python, and C++</b>, and I am passionate about technology and problem-solving. I enjoy web development, game design, and backend projects, continuously expanding my skills in software development.
+            I'm an upcoming <b>Software Developer</b> and Computer Science student at Memorial University of Newfoundland. I have experience in programming languages like <b>HTML, CSS, JavaScript, Python, and C++</b>, and I am passionate about technology and problem-solving. I am also an avid and passionate user of AI tools, leveraging them to speed up my accuracy, streamline workflows, and become a highly efficient developer. I enjoy web development, game design, and backend projects, continuously expanding my skills in software development.
           </p>
         </div>
         <div>

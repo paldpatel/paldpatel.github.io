@@ -31,7 +31,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["skills", "Education", "Project", "About", "Contact"].map(
+        {["Experience", "Education", "Project", "About", "skills", "Contact"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
               <a href={"#"+text}>

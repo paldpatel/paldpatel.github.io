@@ -10,12 +10,13 @@ function Header() {
   return (
     <div className="header">
       <div className="logos">
-        <CropIcon style={{ fontSize: "2rem", color: "white" }} />
+        <CropIcon style={{ fontSize: "2rem", color: "var(--accent-color)" }} />
         <div className="logoName">Portfolio.</div>
       </div>
 
       {matches ? (
         <div className="groupicons">
+          <div className="clickicons"><a href="#Experience">Experience</a></div>
           <div className="clickicons"><a href="#Education">Education</a></div>
           <div className="clickicons"><a href="#Project">Projects</a></div>
           <div className="clickicons"><a href="#About">About</a></div>
