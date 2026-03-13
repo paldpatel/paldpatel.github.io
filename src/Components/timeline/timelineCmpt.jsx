@@ -50,20 +50,7 @@ export default function TimelineCmpt(props) {
         "Resolved helpdesk tickets efficiently, documenting solutions and following escalation.",
         "Created and maintained technical documentation for outage procedures, hardware setups, and system configurations."
       ],
-    },
-    {
-      id: 1,
-      company: "OPAS Mobile",
-      role: "Software Developer",
-      duration: "Feb 2023 - Present",
-      place: "St. John's, NL",
-      description: [
-        "Led the transformation of the company's safety SaaS application into a fully functional Progressive Web App (PWA), ensuring offline capability, installability, and robust service worker integration.",
-        "Directed the development and maintenance of the application, utilizing Apollo Client and ReactJS for the frontend, and Apollo Server and PostgreSQL for the backend.",
-        // ... other descriptions
-      ],
-    },
-    // ... other jobs
+    }
   ];
 
   const schools = [
@@ -73,11 +60,10 @@ export default function TimelineCmpt(props) {
       edu: "Degree: Bachelor Of Science",
       major: "Major: Computer Science",
       minor: "Minor: Business Administration",
-      duration: "Time: Jan 2022 - Dec 2025(expected)",
+      duration: "Time: Jan 2022 - April 2026",
       grade: "GPA*: 3.5/4",
       place: "St. John's, NL",
-    },
-    // ... other schools
+    }
   ];
 
   const jobComponents = jobs.map((job) => (
